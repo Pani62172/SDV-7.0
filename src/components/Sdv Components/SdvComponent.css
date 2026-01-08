@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Cal Sans';
+    src: url('../ASSETS/CalSans-SemiBold.woff2') format('woff2'),
+         url('../ASSETS/CalSans-SemiBold.woff') format('woff')
+         url("../ASSETS/CalSans-SemiBold.ttf") format('ttf');      
+    font-weight: 400; /* Normal weight */
+    font-style: normal; /* Regular style */
+}
+
+.gallery-heading {
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  border: 4px double rgb(57, 56, 56);
+  border-width: 4px 0;
+  padding: 1.5em 0em;
+  width: 90%;
+  margin: 0 auto;
+  font: 400 0.9em/1.5 "Anton", serif;
+}
+
+.gallery-heading span {
+  font: 400 4em/1 "Anton", serif;
+  letter-spacing: 2px;
+  padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px #ccccff;
+  background-size: auto 100%; 
+  background-position: center; 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 50s linear infinite;
+  animation: aitf 50s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px; 
+}
+
+.card .info {
+  position: relative;
+  z-index: 99;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+
+  font: 400 1em/1.5 "Anton", serif;;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.card:hover .info {
+  font-family: "Anton", serif;;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card .info h1 {
+  text-align: left;
+  font: 400 4em/1 "Anton", serif;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+.card .info p {
+  text-align: left;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  margin-top: 8px;
+  font-family: 'Cal Sans', sans-serif;
+  margin-bottom: 20px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom , rgba(155, 39, 39, 0.7), rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 10px; 
+  z-index: 2; 
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-heading {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  z-index: 1;
+  font-size: 1.2em;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  /* .component {
+    margin-top: 20%;
+  } */
+
+  .gallery-heading span {
+    font-size: 3em;
+  }
+
+  .card-container {
+    gap: 15px;
+  }
+
+  .card {
+    width: 250px;
+    height: 350px;
+  }
+
+  .card .info h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .component {
+    padding-top: 10%;
+  } */
+
+  .gallery-heading {
+    padding: 1em 0;
+  }
+
+  .gallery-heading span {
+    font-size: 2.5em;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin: 15px 0;
+  }
+}
+
