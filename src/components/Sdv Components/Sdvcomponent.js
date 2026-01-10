@@ -2,7 +2,7 @@ import React from "react";
 import "./SdvComponent.css";
 
 const images = [
-  "chasis.png",
+  "chassis.png",
 
   "bluetoothmodule.png",
   "Bms.png",
@@ -21,7 +21,6 @@ const images = [
   "Breadboard.png",
   "BatteryCarrier.png",
   "screw driver.png",
-  "Doubletape.png",
 ];
 
 const cardHeadings = [
@@ -41,7 +40,6 @@ const cardHeadings = [
   "Breadboard",
   "Battery Carrier",
   "Screw Driver",
-  "Double Tape",
 ];
 
 const cardParagraphs = [
@@ -61,7 +59,6 @@ const cardParagraphs = [
   "A breadboard is a construction base for prototyping of electronics, used to build and test circuits quickly without soldering.", // Added new paragraph
   "A battery carrier is a device designed to hold batteries securely and provide electrical contacts to connect the batteries to a circuit.", // Added new paragraph
   "A screwdriver is a tool, manual or powered, used for screwing (installing) and unscrewing (removing) screws.",
-  "Double-sided tape is any pressure-sensitive tape that is coated with adhesive on both sides. It is designed to stick two surfaces together, often in a way which is not visible in the end product, due to it being in between the objects rather than overlaying them.",
   ];
 
 const Component = () => {

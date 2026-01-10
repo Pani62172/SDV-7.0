@@ -43,19 +43,7 @@ const Whysdv = () => {
           </div>
           <br />
         <p>
-          Welcome to SDV 7.0, where we’re not just focusing on creating projects
-          but building an environment where you can nurture your skills and
-          ideas to their fullest potential. In this 6th edition, we’re offering
-          more than just a tech workshop—we’re crafting a space where you can
-          connect with like-minded peers and experienced seniors, learning from
-          one another to fuel your growth. Through hands-on projects like
-          building manually controlled bots, line-following bots,
-          obstacle-avoiding bots, and cruise control systems, you’ll dive deep
-          into robotics, IoT, and Arduino programming. SDV 7.0 is all about
-          fostering creativity, collaboration, and practical learning. This
-          isn’t just about completing a project—it’s about creating an
-          experience that helps you grow, learn, and connect with others, all
-          while gaining real-world skills that will shape your future.
+          Welcome to SDV 7.0, a space designed to help you grow your skills and ideas beyond just building projects. In this 6th edition, you’ll collaborate with peers and learn from experienced seniors while working on hands-on projects like manually controlled bots, line-following bots, obstacle-avoiding bots, and cruise control systems. Dive into robotics, IoT, and Arduino programming through practical learning that encourages creativity, collaboration, and real-world skill development—shaping not just projects, but your future.
         </p>
 
 <br />
