@@ -43,10 +43,10 @@ const Homepage = () => {
               <p className="sdv-heading font-antons text-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg">
                 Self Driving Vehicle Workshop 7.0
               </p>
-              <div className="text-2xl font-calsans flex flex-col md:flex-row text-white justify-center items-center mt-4">
-                <span className="italic">Powered by</span> 
+              {/*<div className="text-2xl font-calsans flex flex-col md:flex-row text-white justify-center items-center mt-4">
+                <span className="italic">Powered by</span>
                 <p className="text-center text-red-500"><a href="/sponsors" rel="noreferrer">&nbsp;The Dopamine Store</a></p>
-              </div>
+              </div>*/}
 
               <p className="font-calsans text-2xl text-[#FAFAFA] mt-4 tracking-wider">
                 Get ready for an exciting journey filled with fun, creativity,
