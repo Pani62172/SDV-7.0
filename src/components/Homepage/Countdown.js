@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 
 const Countdown = () => {
-    const targetDate = moment("2026-01-10T00:00:00"); // Set the target date
+    const targetDate = moment("2026-02-07T00:00:00"); // Set the target date
 
     const [timeLeft, setTimeLeft] = useState({
         days: 0,

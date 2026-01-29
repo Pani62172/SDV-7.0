@@ -2,7 +2,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    border: none;
+    border: 12px solid;
     background: none;
     color: #0f1923;
     cursor: pointer;
