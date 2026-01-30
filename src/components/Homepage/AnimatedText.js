@@ -2,6 +2,13 @@ import React, { useEffect } from "react";
 
 const AnimatedText = ({ onAnimationComplete }) => {
   useEffect(() => {
+    // Hide navbar and footer during animation
+    const navbar = document.querySelector('nav, header, .navbar, .header');
+    const footer = document.querySelector('footer, .footer');
+    
+    if (navbar) navbar.style.display = 'none';
+    if (footer) footer.style.display = 'none';
+
     const textElement = document.getElementById("animatedText");
 
     const restartAnimation = () => {
@@ -13,16 +20,34 @@ const AnimatedText = ({ onAnimationComplete }) => {
         textElement.style.strokeDashoffset = "1000";
 
         setTimeout(() => {
+          // Show navbar and footer again after animation
+          if (navbar) navbar.style.display = '';
+          if (footer) footer.style.display = '';
+          
           if (onAnimationComplete) onAnimationComplete();
         }, 3500);
       }, 50);
     };
 
     restartAnimation();
+
+    // Cleanup function to ensure navbar/footer are shown if component unmounts
+    return () => {
+      if (navbar) navbar.style.display = '';
+      if (footer) footer.style.display = '';
+    };
   }, [onAnimationComplete]);
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "100vh", backgroundColor: "#000" }}>
+    <div style={{ 
+      position: "fixed", 
+      top: 0,
+      left: 0,
+      width: "100%", 
+      height: "100vh", 
+      backgroundColor: "#000",
+      zIndex: 9999 // Ensure it's above everything
+    }}>
       <svg
         viewBox="0 0 800 200"
         style={{
