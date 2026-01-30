@@ -41,7 +41,7 @@ export const Navbar = () => {
     <div className="nav-container">
       <div className="left-section">
         <div className="car-logo-container">
-          <a href="">
+          <a href="/">
             <img
               src="https://i.ibb.co/fvZpdy8/SAE-Logo-White-3x.png"
               alt="Logo"
