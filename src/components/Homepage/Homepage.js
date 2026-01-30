@@ -76,7 +76,7 @@ const Homepage = () => {
             <div className="flex-1">
               <img
                 src="https://i.ibb.co/r0bz453/1-removebg.png"
-                alt="Car Image"
+                alt=""
               />
             </div>
           </div>
