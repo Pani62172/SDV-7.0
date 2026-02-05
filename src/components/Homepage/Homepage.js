@@ -67,7 +67,7 @@ const Homepage = () => {
                   {/* Icon color */}
                   <span className="font-calsans text-white text-2xl tracking-wider">
                     {" "}
-                    10th-11th January, 2026
+                    7th-9th February, 2026
                   </span>
                 </p>
               </div>
@@ -76,7 +76,7 @@ const Homepage = () => {
             <div className="flex-1">
               <img
                 src="https://i.ibb.co/r0bz453/1-removebg.png"
-                alt="Car Image"
+                alt=""
               />
             </div>
           </div>

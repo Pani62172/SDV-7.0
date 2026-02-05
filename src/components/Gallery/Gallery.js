@@ -1,65 +1,44 @@
 import React, { useState } from "react";
-import './Gallery.css';
-
-/*import SAE1 from "../ASSETS/GalleryImages/SDVIMG1.JPG";
-import SAE2 from "../ASSETS/GalleryImages/SDVIMG2.JPG";
-import SAE3 from "../ASSETS/GalleryImages/SDVIMG3.JPG";
-import SAE4 from "../ASSETS/GalleryImages/SDVIMG4.JPG";
-import SAE5 from "../ASSETS/GalleryImages/SDVIMG5.JPG";
-import SAE6 from "../ASSETS/GalleryImages/SDVIMG6.JPG";
-import SAE7 from "../ASSETS/GalleryImages/SDVIMG7.JPG";
-import SAE8 from "../ASSETS/GalleryImages/SDVIMG8.JPG";
-import SAE9 from "../ASSETS/GalleryImages/SDVIMG9.JPG";
-import SAE10 from "../ASSETS/GalleryImages/SDVIMG10.JPG";
-import SAE11 from "../ASSETS/GalleryImages/SDVIMG11.JPG";
-import SAE12 from "../ASSETS/GalleryImages/SDVIMG12.JPG";
-import SAE13 from "../ASSETS/GalleryImages/SDVIMG13.JPG";
-import SAE14 from "../ASSETS/GalleryImages/SDVIMG14.JPG";
-import SAE15 from "../ASSETS/GalleryImages/SDVIMG15.JPG";
-import SAE16 from "../ASSETS/GalleryImages/SDVIMG16.JPG";
-import SAE17 from "../ASSETS/GalleryImages/SDVIMG17.JPG";
-import SAE18 from "../ASSETS/GalleryImages/SDVIMG18.JPG";
-import SAE19 from "../ASSETS/GalleryImages/SDVIMG19.JPG";
-import SAE20 from "../ASSETS/GalleryImages/SDVIMG20.JPG";
-import SAE21 from "../ASSETS/GalleryImages/SDVIMG21.JPG";
-import SAE22 from "../ASSETS/GalleryImages/SDVIMG22.JPG";
-import SAE23 from "../ASSETS/GalleryImages/SDVIMG23.JPG";
-import SAE24 from "../ASSETS/GalleryImages/SDVIMG24.JPG";
-import SAE25 from "../ASSETS/GalleryImages/SDVIMG25.JPG";
-import SAE26 from "../ASSETS/GalleryImages/SDVIMG26.JPG";
-import SAE27 from "../ASSETS/GalleryImages/SDVIMG27.JPG";
-import SAE28 from "../ASSETS/GalleryImages/SDVIMG28.JPG";
-import SAE29 from "../ASSETS/GalleryImages/SDVIMG29.JPG";
-import SAE30 from "../ASSETS/GalleryImages/SDVIMG30.JPG";*/
+import "./Gallery.css";
 
 const Gallery = () => {
-  const images = Array.from({ length: 30 }, (_, i) =>
-  `/GalleryImages/SDVIMG${i + 1}.JPG`
-);
-
+  const images = Array.from(
+    { length: 30 },
+    (_, i) => `/GalleryImages/SDVIMG${i + 1}.JPG`
+  );
 
   const [expandedImage, setExpandedImage] = useState(null);
 
-  const handleExpandImage = (img) => {
+  const openImage = (img) => {
     setExpandedImage(img);
   };
 
-  const handleCloseExpand = () => {
+  const closeImage = () => {
     setExpandedImage(null);
   };
 
   return (
     <div className="gallery-container">
-      <h1 className="gallery-title ">Explore the SDV Gallery</h1>
-      <br/><br/>
+      <h1 className="gallery-title">Explore the SDV Gallery</h1>
+
       {expandedImage && (
         <div className="expanded-view">
-          <div className="overlay" onClick={handleCloseExpand}></div>
-          <img src={expandedImage} alt="Expanded View" className="expanded-image" />
+          <div
+            className="overlay"
+            onClick={closeImage}
+            aria-hidden="true"
+          ></div>
+
+          <img
+            src={expandedImage}
+            alt="Expanded SDV event photograph"
+            className="expanded-image"
+          />
+
           <button
             className="close-btn"
-            aria-label="Close expanded view"
-            onClick={handleCloseExpand}
+            onClick={closeImage}
+            aria-label="Close expanded image"
           >
             ×
           </button>
@@ -68,13 +47,18 @@ const Gallery = () => {
 
       <div className="gallery-grid">
         {images.map((img, index) => (
-          <div
-            key={index}
+          <button
+            key={img}
             className="gallery-item"
-            onClick={() => handleExpandImage(img)}
+            onClick={() => openImage(img)}
+            aria-label={`View SDV gallery image ${index + 1}`}
           >
-            <img src={img} alt={`Image ${index + 1}`} loading="lazy" />
-          </div>
+            <img
+              src={img}
+              alt={`SDV gallery ${index + 1}`}
+              loading="lazy"
+            />
+          </button>
         ))}
       </div>
     </div>

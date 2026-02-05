@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
 const WordFlick = () => {
-  const words = [
-    "Explore world of Robotics",
-    "Hands on learning",
-    "Collaborate and grow together",
-    "Build , learn and have fun.",
-  ];
+  const words = useMemo(
+    () => [
+      "Explore world of Robotics",
+      "Hands on learning",
+      "Collaborate and grow together",
+      "Build , learn and have fun.",
+    ],
+    []
+  );
 
   const [part, setPart] = useState("");
   const [index, setIndex] = useState(0);
@@ -16,21 +19,6 @@ const WordFlick = () => {
 
   const skipDelay = 15;
   const speed = 70;
-
-  const containerStyle = {
-    display: "flex",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
-  const wordStyle = {
-    margin: "auto",
-    color: "white",
-    fontFamily: "'Cal Sans', sans-serif",
-    fontSize: "2.4rem",
-    textShadow: "5px 2px #222324, 2px 4px #222324, 3px 5px #222324",
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,11 +44,11 @@ const WordFlick = () => {
     }, speed);
 
     return () => clearInterval(interval);
-  }, [index, offset, forwards, skipCount]); // Removed words from dependencies
+  }, [index, offset, forwards, skipCount, words]);
 
   return (
-    <div style={containerStyle}>
-      <div style={wordStyle}>{part}</div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ color: "white", fontSize: "2.4rem" }}>{part}</div>
     </div>
   );
 };

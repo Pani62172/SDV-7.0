@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {
-  GithubIcon,
   LinkedinIcon,
   InstagramIcon,
   ChevronUpIcon,
@@ -83,6 +82,7 @@ const Footer = () => {
               <a
                 href="https://www.youtube.com/@saenitdgp"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="YouTube"
               >
                 <Youtube className="w-7 h-7 hover:text-[rgb(166,4,4)]" />
@@ -90,6 +90,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/sae-nitdgp/"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-7 h-7 hover:text-[rgb(166,4,4)]" />
@@ -97,6 +98,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/sae.nitd"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-7 h-7 hover:text-[rgb(166,4,4)]" />
@@ -104,6 +106,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/SAENITD"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               >
                 <Facebook className="w-7 h-7 hover:text-[rgb(166,4,4)]" />

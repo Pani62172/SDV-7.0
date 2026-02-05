@@ -2,7 +2,7 @@ import React from "react";
 import WordFlick from "./WordFlick";
 import "./Whysdv.css";
 import sdvImage from '../ASSETS/sdvaboutimg.jpg';
-const photos = [
+/*const photos = [
   { src: "sdv1.jpg", alt: "Photo 1" },
   { src: "sdv12.jpg", alt: "Photo 2" },
   { src: "sdv2.jpg", alt: "Photo 2" },
@@ -25,7 +25,7 @@ const photos = [
   { src: "sdv21.jpg", alt: "Photo 22" },
   { src: "sdv11.jpg", alt: "Photo 18" },
   { src: "sdv22.jpg", alt: "Photo 19" },
-];
+];*/
 
 const Whysdv = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import "./SponsorCard.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export function SponsorCard({ name, logo, description, instagram, linkedin, facebook }) {
   return (
