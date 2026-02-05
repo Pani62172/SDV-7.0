@@ -195,6 +195,8 @@ const SdvWorkshop = () => {
                 min-width: 12rem;
                 padding: 1em 2em;
                 font-size: 15px;
+                justify-content: center;
+                align-items: center;
               }
             }
 
@@ -209,14 +211,18 @@ const SdvWorkshop = () => {
             @media (max-width: 1023px) {
               .button-wrapper {
                 padding: 0.4em 0;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                
               }
             }
           `}</style>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-row flex-nowrap sm:flex-wrap justify-center items-center gap-4 px-4 sm:px-8 md:px-12 lg:px-20 w-full">
+          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col flex-nowrap sm:flex-wrap justify-center items-center gap-4 px-4 sm:px-8 md:px-12 lg:px-20 w-80% sm:w-full mx-auto">
             <div className="button-wrapper flex-1">
               <a 
-                href='https://docs.google.com/forms/d/1OBjOjsYahT44kt_2BJob65cK5LY6eLn7s7KD-GTnXxY/edit' 
+                href='https://docs.google.com/forms/d/e/1FAIpQLScqNUL-cC6L6F2z0VwNYbl62r5zgP53B0A7Dq029wKPapp4SA/viewform' 
                 target="_blank" 
                 rel="noreferrer"
               >

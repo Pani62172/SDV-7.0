@@ -67,7 +67,7 @@ const Homepage = () => {
                   {/* Icon color */}
                   <span className="font-Manrope text-white text-2xl tracking-wider">
                     {" "}
-                    8th-10th February, 2026
+                    6th - 8th March, 2026
                   </span>
                 </p>
               </div>

@@ -3,7 +3,7 @@ import "./Gallery.css";
 
 const Gallery = () => {
   const images = Array.from(
-    { length: 30 },
+    { length: 36 },
     (_, i) => `/GalleryImages/SDVIMG${i + 1}.JPG`
   );
 
