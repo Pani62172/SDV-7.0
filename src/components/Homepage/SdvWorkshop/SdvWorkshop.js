@@ -213,14 +213,14 @@ const SdvWorkshop = () => {
             }
           `}</style>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-row flex-wrap justify-between items-center gap-8 px-4 sm:px-8 md:px-12 lg:px-20 w-full">
-            <div className="button-wrapper">
+          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-row flex-nowrap sm:flex-wrap justify-center items-center gap-4 px-4 sm:px-8 md:px-12 lg:px-20 w-full">
+            <div className="button-wrapper flex-1">
               <a 
                 href='https://docs.google.com/forms/d/1OBjOjsYahT44kt_2BJob65cK5LY6eLn7s7KD-GTnXxY/edit' 
                 target="_blank" 
                 rel="noreferrer"
               >
-                <button className="futuristic-button">
+                <button className="futuristic-button w-full">
                   <div className="clip">
                     <div className="corner rightTop"></div>
                     <div className="corner leftTop"></div>
@@ -234,12 +234,12 @@ const SdvWorkshop = () => {
               </a>
             </div>
 
-            <div className="button-wrapper">
+            <div className="button-wrapper flex-1">
               <a 
                 href='/whysdv'
                 rel="noreferrer"
               >
-                <button className="futuristic-button">
+                <button className="futuristic-button w-full">
                   <div className="clip">
                     <div className="corner rightTop"></div>
                     <div className="corner leftTop"></div>
