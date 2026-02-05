@@ -59,10 +59,12 @@ const Footer = () => {
               <NavLink to="/gallery" className="hover:text-[rgb(166,4,4)]">
                 Gallery
               </NavLink>
+              {/*
               <NavLink to="/sponsors" className="hover:text-[rgb(166,4,4)]">
                 Sponsors
               </NavLink>
-              <NavLink to="https://docs.google.com/forms/d/1OBjOjsYahT44kt_2BJob65cK5LY6eLn7s7KD-GTnXxY/edit" className="hover:text-[rgb(166,4,4)]">
+              */}
+              <NavLink to="https://forms.gle/3pDgpYBSUGXr3E5U8" className="hover:text-[rgb(166,4,4)]">
                 Register
               </NavLink>
             </nav>

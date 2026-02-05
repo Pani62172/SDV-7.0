@@ -2,11 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    fontFamily: {
+      sans: ['Manrope', 'sans-serif'],
+      antons:["Anton", "serif"],
+      calsans: ['Cal Sans', 'sans-serif'],
+      manrope: ['Manrope', 'sans-serif'],
+    },
     extend: {
-      fontFamily: {
-        antons:["Anton", "serif"],
-        calsans: ['Cal Sans', 'sans-serif'],
-      },
 
       animation: {
         "slow-marquee": "marquee 15s linear infinite", // Slow scrolling animation

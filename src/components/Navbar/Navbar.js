@@ -118,7 +118,7 @@ export const Navbar = () => {
             }
             onClick={closeMenu}
           >
-            SDV Kit
+            Kit
           </NavLink>
           <NavLink
             to="/gallery"
@@ -129,6 +129,7 @@ export const Navbar = () => {
           >
             Gallery
           </NavLink>
+         {/*
           <NavLink
             to="/sponsors"
             className={({ isActive }) =>
@@ -138,6 +139,7 @@ export const Navbar = () => {
           >
             Sponsors
           </NavLink>
+          */}
           <NavLink
             to="/dnd"
             className={({ isActive }) =>
@@ -149,7 +151,7 @@ export const Navbar = () => {
           </NavLink>
           {showRegisterButton && (
             <NavLink
-              to="https://docs.google.com/forms/d/1OBjOjsYahT44kt_2BJob65cK5LY6eLn7s7KD-GTnXxY/edit"
+              to="https://forms.gle/3pDgpYBSUGXr3E5U8"
               type="button"
               className={`relative font-bold text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-500 dark:focus:ring-red-500 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_#387478,0_0_30px_#387478] glow-btn ${
                 isMenuOpen ? "visible open" : "close"

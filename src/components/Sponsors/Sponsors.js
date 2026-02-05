@@ -16,10 +16,10 @@ function Sponsor() {
     <div className="min-h-screen px-4 flex items-center justify-center md:mt-0 sm:mt-12">
       <div className="max-w-xl w-full">
         <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
           .announcement-text {
-            font-family: 'Sansation', 'Samsung Sharp Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Manrope', sans-serif;
             font-size: 2.5rem;
             font-weight: 400;
             text-align: center;

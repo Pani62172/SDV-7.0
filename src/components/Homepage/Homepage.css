@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Cal Sans';
-    src: url('../ASSETS/CalSans-SemiBold.woff2') format('woff2'),
-         url('../ASSETS/CalSans-SemiBold.woff') format('woff')
-         url("../ASSETS/CalSans-SemiBold.ttf") format('ttf');      
+  font-family: 'Manrope', sans-serif;
+    src: url('../ASSETS/manrope-extrabold.otf') format('otf'),
+         url('../ASSETS/manrope-light.otf') format('otf')
+         url("../ASSETS/manrope-medium.otf") format('otf');      
     font-weight: 400; /* Normal weight */
     font-style: normal; /* Regular style */
 }
@@ -135,13 +135,13 @@
   .dopamine p{
     font-size: 3rem;
     text-align: center;
-    font-family: 'Cal Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
     letter-spacing: 2px;
   }
   .dopamine span{
     font-size: 3rem;
     color: red;
-    font-family: 'Cal Sans', sans-serif;
+    font-family: 'Manrope', sans-serif;
     letter-spacing: 1px;
   }
   /* Responsive styles */
