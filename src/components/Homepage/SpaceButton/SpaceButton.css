@@ -2,7 +2,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    border: 12px solid;
+    border: none ;
     background: none;
     color: #0f1923;
     cursor: pointer;
@@ -103,7 +103,7 @@
   
   .regbutton_text {
     position: relative;
-    font-family: sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 1.4px;

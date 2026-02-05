@@ -3,16 +3,13 @@ import "./SdvComponent.css";
 
 const images = [
   "chassis.png",
-
-  "bluetoothmodule.png",
+  "nodemcu.jpg",
   "Bms.png",
-
   "Arduino.png",
   "ServoMotor.png",
   "L298.png",
   "BOMotor.png",
   "IRproximity.png",
-
   "Cells.png",
   "UltrasonicSensor.png",
   "Switches.png",
@@ -25,7 +22,7 @@ const images = [
 
 const cardHeadings = [
   "Chassis",
-  "Bluetooth Module HC-05",
+  "ESP8266 NODEMCU ",
   "Battery Management System",
   "Arduino UNO",
   "Servo Motors",
@@ -44,7 +41,7 @@ const cardHeadings = [
 
 const cardParagraphs = [
   "The chassis is the frame of the robot, which holds all the components together and provides structural support.",
-  "The HC-05 is a Bluetooth module that allows devices to communicate wirelessly over a short distance. It is commonly used in robotics and IoT projects to enable wireless communication between devices.",
+  "The ESP8266 is a system on a chip (SOC) Wi-Fi microchip for Internet of Things (IoT) applications produced by Espressif Systems. Given its low cost, small size and adaptability with embedded devices, the ESP8266 is now used extensively across IoT devices.",
   "A Battery Management System (BMS) is an electronic system that ensures the safe operation of a rechargeable battery by monitoring its state, protecting it, controlling its environment, and balancing it",
   "The Arduino Uno is an open-source microcontroller board based on the Microchip ATmega328P microcontroller (MCU) and developed by Arduino.cc and initially released in 2010.",
   "A servo motor is defined as an electric motor that allows for precise control of angular or linear position, speed, and torque.",

@@ -61,10 +61,10 @@ const Banner = () => {
   });
 
   const text =
-    "----- SELF-DRIVING VEHICLE WORKSHOP 7.0 SAEINDIA NIT DURGAPUR ----- ";
+    "| SELF-DRIVING VEHICLE WORKSHOP 7.0 SAEINDIA NIT DURGAPUR | ";
 
   return (
-    <div className="relative mt-10 overflow-hidden bg-red-600 text-white py-6">
+    <div className="relative mt-10 overflow-hidden bg-red-500 text-black py-6">
       <motion.div
         className="flex whitespace-nowrap will-change-transform"
         style={{ x }}

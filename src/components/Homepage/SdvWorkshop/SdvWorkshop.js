@@ -1,4 +1,5 @@
 import React from "react";
+import sdvImg from '../../ASSETS/SDV.png';
 
 const SdvWorkshop = () => {
   return (
@@ -12,9 +13,9 @@ const SdvWorkshop = () => {
       <div className="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6 md:space-x-8">
         <div className="flex justify-center sm:w-1/2 sm:pl-4 md:pl-6">
           <img
-            src="./sdvposter.jpg"
+            src={sdvImg}
             alt="Self-Driving Vehicles Workshop"
-            className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-xl shadow-2xl transition-transform duration-300 hover:scale-105 object-contain mt-6"
+            className="w-full max-w-[400px] h-auto rounded-xl shadow-2xl transition-transform duration-300 hover:scale-105 object-contain mt-6"
           />
         </div>
 
@@ -27,13 +28,17 @@ const SdvWorkshop = () => {
           <style>{`
             .futuristic-button {
               position: relative;
-              width: 11em;
-              height: 4em;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 12rem;
+              padding: 0.9em 1.6em;
+              height: auto;
               outline: none;
-              transition: 0.1s;
+              transition: 0.12s ease;
               background-color: transparent;
               border: none;
-              font-size: 13px;
+              font-size: 16px;
               font-weight: bold;
               color: #ddebf0;
               cursor: pointer;
@@ -84,8 +89,8 @@ const SdvWorkshop = () => {
 
             .corner {
               position: absolute;
-              width: 4em;
-              height: 4em;
+              width: 3.5em;
+              height: 3.5em;
               background-color: #C10000;
               box-shadow: inset 1px 1px 8px #C10000;
               transform: scale(1) rotate(45deg);
@@ -187,14 +192,17 @@ const SdvWorkshop = () => {
 
             @media (max-width: 640px) {
               .futuristic-button {
-                width: 10em;
-                height: 3.5em;
-                font-size: 12px;
+                min-width: 12rem;
+                padding: 1em 2em;
+                font-size: 15px;
               }
             }
 
             /* Extra spacing for button wrapper */
             .button-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: center;
               padding: 0.5em 1em;
             }
 
@@ -205,7 +213,7 @@ const SdvWorkshop = () => {
             }
           `}</style>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col lg:flex-row justify-center sm:justify-center md:justify-start items-center lg:gap-16">
+          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-row flex-wrap justify-center items-center gap-6 lg:gap-[260px] ">
             <div className="button-wrapper">
               <a 
                 href='https://docs.google.com/forms/d/1OBjOjsYahT44kt_2BJob65cK5LY6eLn7s7KD-GTnXxY/edit' 
