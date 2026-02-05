@@ -1,7 +1,7 @@
 import React from "react";
 import WordFlick from "./WordFlick";
 import "./Whysdv.css";
-import sdvImage from '../ASSETS/sdvaboutimg.jpg';
+//import sdvImage from '../ASSETS/sdvaboutvid.mp4';
 /*const photos = [
   { src: "sdv1.jpg", alt: "Photo 1" },
   { src: "sdv12.jpg", alt: "Photo 2" },
@@ -39,7 +39,7 @@ const Whysdv = () => {
 
       <div className="media-right">
       <div className="media-container h-auto w-full">
-          <img src={sdvImage} alt="SDV preview" className="w-full max-w-md mx-auto h-auto" />
+          <video src="./sdvaboutvid.mp4" autoPlay loop muted className="w-full h-auto" />
           </div>
           <br />
         <p>
