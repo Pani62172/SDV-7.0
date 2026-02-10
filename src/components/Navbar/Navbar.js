@@ -39,6 +39,27 @@ export const Navbar = () => {
 
   return (
     <div className="nav-container">
+      <style>{`
+        .register-btn-wrapper button {
+          font-size: 1rem;
+          padding: 0.5em 1.6em;
+          background-color: #000;
+          border: 3px solid red;
+          border-radius: 1em;
+          color: #fff;
+          font-weight: bolder;
+          transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+          box-shadow: -5px 5px 0px 0px red;
+          cursor: pointer;
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        .register-btn-wrapper button:hover {
+          background-color: #FF474C;
+        }
+      `}</style>
+
       <div className="left-section">
         <div className="car-logo-container">
           <a href="/">
@@ -150,16 +171,16 @@ export const Navbar = () => {
             DnD
           </NavLink>
           {showRegisterButton && (
-            <NavLink
-              to="https://forms.gle/3pDgpYBSUGXr3E5U8"
-              type="button"
-              className={`relative font-bold text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-500 dark:focus:ring-red-500 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_#387478,0_0_30px_#387478] glow-btn ${
-                isMenuOpen ? "visible open" : "close"
-              }`}
-              onClick={closeMenu}
-            >
-              REGISTER
-            </NavLink>
+            <div className="register-btn-wrapper">
+              <a
+                href="https://forms.gle/3pDgpYBSUGXr3E5U8"
+                target="_blank"
+                rel="noreferrer"
+                onClick={closeMenu}
+              >
+                <button>REGISTER</button>
+              </a>
+            </div>
           )}
         </div>
       </div>
