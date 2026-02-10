@@ -6,13 +6,17 @@
   }
   
   .why-heading h1 {
-    font: 400 4em/1 'Manrope', sans-serif;
+    font: 500 4em/1 'Manrope', sans-serif;
     letter-spacing: 2px;
     font-weight: bold;
     /* margin-top: 24px; */
     color: rgb(241, 13, 13);
   }
-  
+
+  .media-right p {
+    font-size: 1.6rem;
+  }
+
   .upcoming-details {
     font-weight: bold;
     margin-top: 20px;

@@ -10,254 +10,116 @@ const SdvWorkshop = () => {
         </h1>
       </div>
 
-      <div className="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6 md:space-x-8">
-        <div className="flex justify-center sm:w-1/2 sm:pl-4 md:pl-6">
+      <div className="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center sm:items-center justify-center gap-6 sm:gap-8 md:gap-10 w-full px-4">
+        <div className="flex justify-center w-full sm:w-1/2 flex-shrink-0">
           <img
             src={sdvImg}
             alt="Self-Driving Vehicles Workshop"
-            className="w-full max-w-[400px] h-auto rounded-xl shadow-2xl transition-transform duration-300 hover:scale-105 object-contain mt-6"
+            className="w-full max-w-xs sm:max-w-sm h-auto rounded-xl shadow-2xl transition-transform duration-300 hover:scale-105 object-contain"
           />
         </div>
 
-        <div className="sm:w-1/2 text-center sm:text-left sm:pr-4 md:pr-6">
-          <p className="text-sm sm:text-base md:text-sm lg:text-2xl text-[#F5F5F5] tracking-wide leading-relaxed">
-            <br />
+        <div className="w-full sm:w-1/2 text-center sm:text-left">
+          <p className="text-sm sm:text-base md:text-lg lg:text-2xl text-[#F5F5F5] tracking-wide leading-relaxed">
+            <br className="hidden sm:block" />
             The 7th edition of <span className="text-red-500">SDV Workshop</span> is back with exciting projects such as manually operated bots, line-following bots, obstacle-avoiding bots, and controlling bot movement. Whether you're a beginner or have some experience, you'll gain valuable technical skills in robotics and IoT while learning to collaborate effectively with your team. This is more than just a hands-on experience; it's about growth, communication, and teamwork. Along the way, you'll develop problem-solving skills, make new friends, and create lasting memories. Don't miss this opportunity to dive into a world of innovation, creativity, and fun!
           </p>
 
           <style>{`
-            .futuristic-button {
-              position: relative;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              min-width: 12rem;
-              padding: 0.9em 1.6em;
-              height: auto;
-              outline: none;
-              transition: 0.12s ease;
-              background-color: transparent;
-              border: none;
-              font-size: 16px;
-              font-weight: bold;
-              color: #ddebf0;
-              cursor: pointer;
-            }
+  .futuristic-button {
+    --color: #C10000;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.2rem;
+    height: auto;
+    min-height: 2.2rem;
+    margin: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.25s ease;
+    z-index: 1;
+    font-size: clamp(0.875rem, 2vw, 1.1rem);
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
 
-            .clip {
-              --color: #C10000;
-              position: absolute;
-              top: 0;
-              overflow: hidden;
-              width: 100%;
-              height: 100%;
-              border: 5px double var(--color);
-              box-shadow: inset 0px 0px 15px #C10000;
-              clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            }
+  .futuristic-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
 
-            .arrow {
-              position: absolute;
-              transition: 0.2s;
-              background-color: #C10000;
-              top: 35%;
-              width: 11%;
-              height: 30%;
-            }
+  .futuristic-button:hover {
+    color: #fff;
+  }
 
-            .leftArrow {
-              left: -13.5%;
-              clip-path: polygon(100% 0, 100% 100%, 0 50%);
-            }
+  .futuristic-button:hover:before {
+    top: -30px;
+    left: -30px;
+  }
 
-            .rightArrow {
-              clip-path: polygon(100% 49%, 0 0, 0 100%);
-              left: 102%;
-            }
+  .futuristic-button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
 
-            .futuristic-button:hover .rightArrow {
-              background-color: #FF6B6B;
-              left: -15%;
-              animation: 0.6s ease-in-out both infinite alternate rightArrow8;
-            }
-
-            .futuristic-button:hover .leftArrow {
-              background-color: #FF6B6B;
-              left: 103%;
-              animation: 0.6s ease-in-out both infinite alternate leftArrow8;
-            }
-
-            .corner {
-              position: absolute;
-              width: 3.5em;
-              height: 3.5em;
-              background-color: #C10000;
-              box-shadow: inset 1px 1px 8px #C10000;
-              transform: scale(1) rotate(45deg);
-              transition: 0.2s;
-            }
-
-            .rightTop {
-              top: -1.98em;
-              left: 91%;
-            }
-
-            .leftTop {
-              top: -1.96em;
-              left: -3.0em;
-            }
-
-            .leftBottom {
-              top: 2.10em;
-              left: -2.15em;
-            }
-
-            .rightBottom {
-              top: 45%;
-              left: 88%;
-            }
-
-            .futuristic-button:hover .leftTop {
-              animation: 0.1s ease-in-out 0.05s both changeColor8,
-              0.2s linear 0.4s both lightEffect8;
-            }
-
-            .futuristic-button:hover .rightTop {
-              animation: 0.1s ease-in-out 0.15s both changeColor8,
-              0.2s linear 0.4s both lightEffect8;
-            }
-
-            .futuristic-button:hover .rightBottom {
-              animation: 0.1s ease-in-out 0.25s both changeColor8,
-              0.2s linear 0.4s both lightEffect8;
-            }
-
-            .futuristic-button:hover .leftBottom {
-              animation: 0.1s ease-in-out 0.35s both changeColor8,
-              0.2s linear 0.4s both lightEffect8;
-            }
-
-            .futuristic-button:hover .corner {
-              transform: scale(1.25) rotate(45deg);
-            }
-
-            .futuristic-button:hover .clip {
-              animation: 0.2s ease-in-out 0.55s both greenLight8;
-              --color: #FF6B6B;
-            }
-
-            @keyframes changeColor8 {
-              from {
-                background-color: #C10000;
-              }
-              to {
-                background-color: #FF6B6B;
-              }
-            }
-
-            @keyframes lightEffect8 {
-              from {
-                box-shadow: 1px 1px 5px #FF6B6B;
-              }
-              to {
-                box-shadow: 0 0 2px #FF6B6B;
-              }
-            }
-
-            @keyframes greenLight8 {
-              from {
-              }
-              to {
-                box-shadow: inset 0px 0px 32px #FF6B6B;
-              }
-            }
-
-            @keyframes leftArrow8 {
-              from {
-                transform: translate(0px);
-              }
-              to {
-                transform: translateX(10px);
-              }
-            }
-
-            @keyframes rightArrow8 {
-              from {
-                transform: translate(0px);
-              }
-              to {
-                transform: translateX(-10px);
-              }
-            }
-
-            @media (max-width: 640px) {
-              .futuristic-button {
-                min-width: 12rem;
-                padding: 1em 2em;
-                font-size: 15px;
-                justify-content: center;
-                align-items: center;
-              }
-            }
-
-            /* Extra spacing for button wrapper */
-            .button-wrapper {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 0.5em 1em;
-            }
-
-            @media (max-width: 1023px) {
-              .button-wrapper {
-                padding: 0.4em 0;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                
-              }
-            }
+  @media (max-width: 640px) {
+    .futuristic-button {
+      padding: 0.4rem 1rem;
+      margin: 0.4rem;
+      min-height: 2rem;
+    }
+  }
           `}</style>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col flex-nowrap sm:flex-wrap justify-center items-center gap-4 px-4 sm:px-8 md:px-12 lg:px-20 w-80% sm:w-full mx-auto">
-            <div className="button-wrapper flex-1">
-              <a 
-                href='https://docs.google.com/forms/d/e/1FAIpQLScqNUL-cC6L6F2z0VwNYbl62r5zgP53B0A7Dq029wKPapp4SA/viewform' 
-                target="_blank" 
-                rel="noreferrer"
-              >
-                <button className="futuristic-button w-full">
-                  <div className="clip">
-                    <div className="corner rightTop"></div>
-                    <div className="corner leftTop"></div>
-                    <div className="corner leftBottom"></div>
-                    <div className="corner rightBottom"></div>
-                  </div>
-                  <span className="arrow leftArrow"></span>
-                  <span className="arrow rightArrow"></span>
-                  Register Now
-                </button>
-              </a>
-            </div>
+          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-wrap justify-center items-center gap-4 w-full">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScqNUL-cC6L6F2z0VwNYbl62r5zgP53B0A7Dq029wKPapp4SA/viewform"
+              target="_blank"
+              rel="noreferrer"
+              className="futuristic-button"
+            >
+              <div className="clip">
+                <div className="corner rightTop"></div>
+                <div className="corner leftTop"></div>
+                <div className="corner leftBottom"></div>
+                <div className="corner rightBottom"></div>
+              </div>
+              <span className="arrow leftArrow"></span>
+              <span className="arrow rightArrow"></span>
+              Register Now
+            </a>
 
-            <div className="button-wrapper flex-1">
-              <a 
-                href='/whysdv'
-                rel="noreferrer"
-              >
-                <button className="futuristic-button w-full">
-                  <div className="clip">
-                    <div className="corner rightTop"></div>
-                    <div className="corner leftTop"></div>
-                    <div className="corner leftBottom"></div>
-                    <div className="corner rightBottom"></div>
-                  </div>
-                  <span className="arrow leftArrow"></span>
-                  <span className="arrow rightArrow"></span>
-                  Learn More
-                </button>
-              </a>
-            </div>
+            <a
+              href="/whysdv"
+              rel="noreferrer"
+              className="futuristic-button"
+            >
+              <div className="clip">
+                <div className="corner rightTop"></div>
+                <div className="corner leftTop"></div>
+                <div className="corner leftBottom"></div>
+                <div className="corner rightBottom"></div>
+              </div>
+              <span className="arrow leftArrow"></span>
+              <span className="arrow rightArrow"></span>
+              Learn More
+            </a>
           </div>
         </div>
       </div>

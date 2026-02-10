@@ -1,33 +1,16 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import WordFlick from "./WordFlick";
 import "./Whysdv.css";
-//import sdvImage from '../ASSETS/sdvaboutvid.mp4';
-/*const photos = [
-  { src: "sdv1.jpg", alt: "Photo 1" },
-  { src: "sdv12.jpg", alt: "Photo 2" },
-  { src: "sdv2.jpg", alt: "Photo 2" },
-  { src: "sdv13.jpg", alt: "Photo 9" },
-  { src: "sdv3.jpg", alt: "Photo 3" },
-  { src: "sdv14.jpg", alt: "Photo 10" },
-  { src: "sdv4.jpg", alt: "Photo 4" },
-  { src: "sdv15.jpg", alt: "Photo 11" },
-  { src: "sdv5.jpg", alt: "Photo 5" },
-  { src: "sdv16.jpg", alt: "Photo 12" },
-  { src: "sdv6.jpg", alt: "Photo 6" },
-  { src: "sdv17.jpg", alt: "Photo 13" },
-  { src: "sdv7.jpg", alt: "Photo 7" },
-  { src: "sdv18.jpg", alt: "Photo 14" },
-  { src: "sdv8.jpg", alt: "Photo 15" },
-  { src: "sdv19.jpg", alt: "Photo 20" },
-  { src: "sdv9.jpg", alt: "Photo 16" },
-  { src: "sdv20.jpg", alt: "Photo 21" },
-  { src: "sdv10.jpg", alt: "Photo 17" },
-  { src: "sdv21.jpg", alt: "Photo 22" },
-  { src: "sdv11.jpg", alt: "Photo 18" },
-  { src: "sdv22.jpg", alt: "Photo 19" },
-];*/
 
 const Whysdv = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
+
   return (
     <div className="why-container">
       <div className="why-heading">
@@ -38,16 +21,20 @@ const Whysdv = () => {
       </div>
 
       <div className="media-right">
-      <div className="media-container h-auto w-full">
-          <video src="./sdvaboutvid.mp4" autoPlay loop muted className="w-full h-auto" />
-          </div>
-          <br />
-        <p>
-          Welcome to SDV 7.0, a space designed to help you grow your skills and ideas beyond just building projects. In this 6th edition, you’ll collaborate with peers and learn from experienced seniors while working on hands-on projects like manually controlled bots, line-following bots, obstacle-avoiding bots, and cruise control systems. Dive into robotics, IoT, and Arduino programming through practical learning that encourages creativity, collaboration, and real-world skill development—shaping not just projects, but your future.
+        <div className="media-container h-auto w-full">
+          <video 
+            ref={videoRef}
+            src="./sdvaboutvid.mp4" 
+            autoPlay 
+            loop 
+            muted
+            className="w-full h-auto"
+          />
+        </div>
+        <br />
+        
+        <p>Welcome to SDV 7.0, a space designed to help you grow your skills and ideas beyond just building projects. In this 6th edition, you'll collaborate with peers and learn from experienced seniors while working on hands-on projects like manually controlled bots, line-following bots, obstacle-avoiding bots, and cruise control systems. Dive into robotics, IoT, and Arduino programming through practical learning that encourages creativity, collaboration, and real-world skill development—shaping not just projects, but your future. You will also gain exposure to problem-solving methodologies, system design thinking, and efficient debugging techniques essential for modern engineering challenges. SDV 7.0 encourages innovation through teamwork, mentorship, and experimentation, helping you build confidence, technical expertise, and a strong foundation for future academic, research, and industry opportunities. Participants will also engage in interactive workshops, technical discussions, and mini challenges that enhance analytical thinking and practical implementation skills, preparing them to adapt to evolving technologies and contribute effectively to multidisciplinary engineering environments.
         </p>
-
-<br />
-{/* <h1 className="text-6xl upcoming-details">Exciting Details Coming Soon !!!</h1> */}
      
         <h3>
           An event where creativity meets technology, allowing students to

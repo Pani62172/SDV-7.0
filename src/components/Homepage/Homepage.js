@@ -37,10 +37,10 @@ const Homepage = () => {
 
       {showOtherContent && (
         <div className="md:flex md:flex-col">
-          <div className="flex flex-col md:flex-row items-center space-y-8 md:space-x-8 mx-12">
+          <div className="flex flex-col md:flex-row items-center space-y-8 md:space-x-8 mx-4 sm:mx-8 md:mx-12">
             {/* Text Section */}
             <div className="flex-1 text-center md:text-left">
-              <p className="sdv-heading font-calsans text-xl  leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg">
+              <p className="sdv-heading font-calsans text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg">
                 Self Driving Vehicle Workshop 7.0
               </p>
               {/*<div className="text-2xl font-calsans flex flex-col md:flex-row text-white justify-center items-center mt-4">
@@ -48,35 +48,32 @@ const Homepage = () => {
                 <p className="text-center text-red-500"><a href="/sponsors" rel="noreferrer">&nbsp;The Dopamine Store</a></p>
               </div>*/}
 
-              <p className="font-calsans text-xl text-[#FAFAFA] mt-4 tracking-wider">
+              <p className="font-calsans text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl text-[#FAFAFA] mt-4 tracking-wider">
                 Get ready for an exciting journey filled with fun, creativity,
-                and new connections ,SDV 7.0 is where big ideas come to life!
+                and new connections ,SDV 7.0 is where big ideas come to life!
               </p>
 
               <div className="mt-6">
-                <p className="flex items-center">
-                  <MapPin className="mr-2 text-[#C10000]" /> {/* Icon color */}
-                  <span className=" font-Manrope text-white text-2xl tracking-wider">
-                    {" "}
-                    {/* Text color */}
+                <p className="flex items-center justify-center md:justify-start gap-2 lg:gap-3">
+                  <MapPin className="text-[#C10000] w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0" />
+                  <span className="font-Manrope text-white text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl tracking-wider">
                     SAC Auditorium, NIT Durgapur
                   </span>
                 </p>
-                <p className="flex items-center mt-2">
-                  <CalendarDays className="mr-2 text-[#C10000]" />{" "}
-                  {/* Icon color */}
-                  <span className="font-Manrope text-white text-2xl tracking-wider">
-                    {" "}
+                <p className="flex items-center justify-center md:justify-start gap-2 mt-3 sm:mt-4 lg:gap-3">
+                  <CalendarDays className="text-[#C10000] w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0" />
+                  <span className="font-Manrope text-white text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl tracking-wider">
                     6th - 8th March, 2026
                   </span>
                 </p>
               </div>
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 w-full md:w-auto">
               <img
                 src="https://i.ibb.co/r0bz453/1-removebg.png"
-                alt=""
+                alt="SDV Workshop"
+                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto"
               />
             </div>
           </div>
