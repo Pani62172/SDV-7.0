@@ -176,20 +176,12 @@
 }
 
 @media (max-width: 1024px) {
-  .nav
   .nav-items {
     gap: 54px;
     text-transform: uppercase;
   }
   .nav-item{
     font-size: 0.8rem;
-  }
-  .nav-item:nth-child(2) {
-    width: 7.8rem;
-  }
-  .nav-item:nth-child(4) {
-    width: 1.8rem;
-    margin-right: 0px;
   }
   .right-section{
     justify-content: flex-end;
