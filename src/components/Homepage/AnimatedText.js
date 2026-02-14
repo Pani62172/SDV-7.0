@@ -48,16 +48,37 @@ const AnimatedText = ({ onAnimationComplete }) => {
       backgroundColor: "#000",
       zIndex: 9999 // Ensure it's above everything
     }}>
+      <style>{`
+        .animated-text-svg {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: auto;
+        }
+        
+        .animated-loader {
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        
+        @media (min-width: 768px) {
+          .animated-text-svg {
+            top: 35%;
+          }
+          
+          .animated-loader {
+            top: 68%;
+          }
+        }
+      `}</style>
+      
       <svg
         viewBox="0 0 800 200"
-        style={{
-          position: "absolute",
-          top: "40%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "100%",
-          height: "auto",
-        }}
+        className="animated-text-svg"
       >
         <defs>
           <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="400" height="400">
@@ -104,12 +125,7 @@ const AnimatedText = ({ onAnimationComplete }) => {
       </svg>
 
       {/* Loader */}
-      <div style={{
-        position: "absolute",
-        top: "60%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}>
+      <div className="animated-loader">
         <style>{`
           .semicircle,
           .semicircle div {

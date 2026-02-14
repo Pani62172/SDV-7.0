@@ -33,7 +33,9 @@ const Whysdv = () => {
         </div>
         <br />
         
-        <p>Welcome to SDV 7.0, a space designed to help you grow your skills and ideas beyond just building projects. In this 6th edition, you'll collaborate with peers and learn from experienced seniors while working on hands-on projects like manually controlled bots, line-following bots, obstacle-avoiding bots, and cruise control systems. Dive into robotics, IoT, and Arduino programming through practical learning that encourages creativity, collaboration, and real-world skill development—shaping not just projects, but your future. You will also gain exposure to problem-solving methodologies, system design thinking, and efficient debugging techniques essential for modern engineering challenges. SDV 7.0 encourages innovation through teamwork, mentorship, and experimentation, helping you build confidence, technical expertise, and a strong foundation for future academic, research, and industry opportunities. Participants will also engage in interactive workshops, technical discussions, and mini challenges that enhance analytical thinking and practical implementation skills, preparing them to adapt to evolving technologies and contribute effectively to multidisciplinary engineering environments.
+        <p>Welcome to SDV 7.0, a platform to grow beyond basic projects through collaboration, mentorship, and hands-on learning. In this edition, you’ll work with peers and seniors on projects like manually controlled bots, line-following bots, obstacle-avoiding bots, and cruise control systems while exploring robotics, IoT, and Arduino programming.
+
+The program focuses on creativity, teamwork, and real-world problem solving, helping you develop system design thinking and effective debugging skills essential for modern engineering. Through interactive workshops, technical discussions, and mini challenges, you’ll strengthen your analytical and practical abilities, build confidence, and gain a solid foundation for future academic, research, and industry opportunities.
         </p>
      
         <h3>
