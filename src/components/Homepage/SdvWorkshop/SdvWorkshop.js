@@ -10,8 +10,8 @@ const SdvWorkshop = () => {
         </h1>
       </div>
 
-      <div className="mt-8 sm:mt-12 md:mt-16 flex flex-col sm:flex-row items-center sm:items-center justify-center gap-6 sm:gap-8 md:gap-10 w-full px-4">
-        <div className="flex justify-center w-full sm:w-1/2 flex-shrink-0">
+      <div className="mt-8 sm:mt-12 md:mt-16 flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-10 w-full px-4">
+        <div className="flex justify-center w-full lg:w-1/2 flex-shrink-0">
           <img
             src={sdvImg}
             alt="Self-Driving Vehicles Workshop"
@@ -19,9 +19,9 @@ const SdvWorkshop = () => {
           />
         </div>
 
-        <div className="w-full sm:w-1/2 text-center sm:text-left">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p className="text-sm sm:text-base md:text-lg lg:text-2xl text-[#F5F5F5] tracking-wide leading-relaxed">
-            <br className="hidden sm:block" />
+            <br className="hidden lg:block" />
             The 7th edition of <span className="text-red-500">SDV Workshop</span> is back with exciting projects such as manually operated bots, line-following bots, obstacle-avoiding bots, and controlling bot movement. Whether you're a beginner or have some experience, you'll gain valuable technical skills in robotics and IoT while learning to collaborate effectively with your team. This is more than just a hands-on experience; it's about growth, communication, and teamwork. Along the way, you'll develop problem-solving skills, make new friends, and create lasting memories. Don't miss this opportunity to dive into a world of innovation, creativity, and fun!
           </p>
 

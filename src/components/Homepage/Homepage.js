@@ -40,7 +40,7 @@ const Homepage = () => {
           <div className="flex flex-col md:flex-row items-center space-y-8 md:space-x-8 mx-4 sm:mx-8 md:mx-12">
             {/* Text Section */}
             <div className="flex-1 text-center md:text-left">
-              <p className="sdv-heading font-calsans text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg">
+              <p className="sdv-heading font-calsans text-xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg">
                 Self Driving Vehicle Workshop 7.0
               </p>
               {/*<div className="text-2xl font-calsans flex flex-col md:flex-row text-white justify-center items-center mt-4">
