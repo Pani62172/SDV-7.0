@@ -45,6 +45,11 @@
     letter-spacing: 4px;
 }
 
+.dnd-heading h1 .word {
+    display: inline;
+    margin: 0 0.2em;
+}
+
 .dnd-heading h2 {
     font: 400 6.6em/1 'Manrope', sans-serif;
     font-weight: bold;
@@ -99,6 +104,13 @@
     .dnd-heading h1 {
         font-size: 6.5rem;
     }
+    
+    .dnd-heading h1 .word {
+        display: block;
+        margin: 0;
+        line-height: 1.1;
+    }
+    
     .dnd-heading h2 {
         font-size: 7rem;
     }
@@ -128,6 +140,13 @@
     .dnd-heading h1 {
         font-size: 5.5rem;
     }
+    
+    .dnd-heading h1 .word {
+        display: block;
+        margin: 0;
+        line-height: 1.1;
+    }
+    
     .dnd-heading h2 {
         font-size: 6rem;
     }
@@ -145,6 +164,13 @@
         font-size: 4.4rem;
         margin-top: 50px;
     }
+    
+    .dnd-heading h1 .word {
+        display: block;
+        margin: 0;
+        line-height: 1.1;
+    }
+    
     .dnd-heading h2 {
         font-size: 4.4rem;
       
@@ -162,6 +188,13 @@
         font-size: 4rem;
         margin-top: 50px;
     }
+    
+    .dnd-heading h1 .word {
+        display: block;
+        margin: 0;
+        line-height: 1.1;
+    }
+    
     .dnd-heading h2 {
         font-size: 4.2rem;
    

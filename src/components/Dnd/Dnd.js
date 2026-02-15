@@ -10,7 +10,11 @@ const Dnd = () => {
       </video>
       <div className="dnd-overlay"></div> {/* Add the overlay */}
       <div className="dnd-heading">
-        <h1>drag and drift</h1>
+        <h1>
+          <span className="word">drag</span>
+          <span className="word">and</span>
+          <span className="word">drift</span>
+        </h1>
         {/*<h2>6.0</h2>*/}
       </div>
       <div className="dnd-coming">

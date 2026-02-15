@@ -15,6 +15,8 @@
 
   .media-right p {
     font-size: 1.6rem;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .upcoming-details {
@@ -117,7 +119,7 @@
     .media-right {
       margin-top: 20px;
       margin-left: 0;
-      text-align: center;
+      text-align: left;
     }
   
     .media-right h3,
@@ -125,6 +127,17 @@
       margin-left: 0;
       margin-right: 0;
       font-size: 1.2rem;
+      text-align: left;
+    }
+    
+    .media-right h3 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    
+    .media-right p {
+      padding-left: 25px;
+      padding-right: 25px;
     }
     
     .video1 video{
@@ -185,6 +198,17 @@
       font-size: 1rem;
       margin-left: 5px;
       margin-right: 5px;
+      text-align: left;
+    }
+    
+    .media-right h3 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .media-right p {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
   @media  (min-width: 820px) and  (max-width: 920px){
@@ -193,7 +217,20 @@
         text-align: left;
         margin: 10px;
       }
-      .video1 video{
+      
+    .media-right h3 {
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+      
+    .media-right p {
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+      
+    .video1 video{
         width: 300px;
         height: auto;
       }
@@ -211,6 +248,18 @@
     }
   }
   @media (width: 540px){
+    
+    .media-right h3 {
+      text-align: left;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    
+    .media-right p {
+      text-align: left;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
     
     .video1 video{
         width: 300px;
@@ -273,7 +322,7 @@
     .media-right {
       flex: 1 1 auto;
       margin: 20px;
-      text-align: center; /* Center text alignment */
+      text-align: left;
     }
   
     .media-right h3 {
@@ -281,12 +330,18 @@
       margin-bottom: 15px; /* Adjust spacing */
       margin-left: 5px; /* Reduce left margin */
       margin-right: 5px; /* Reduce right margin */
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 30px;
     }
   
     .media-right p {
       font-size: 1.2rem; /* Adjust font size */
       margin: 0 10px; /* Adjust horizontal margins */
       line-height: 1.5; /* Tweak line height for readability */
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
   
@@ -307,4 +362,3 @@ h1 {
     letter-spacing: 2px; /* Add some letter spacing for a modern look */
     position: relative;
   }
-

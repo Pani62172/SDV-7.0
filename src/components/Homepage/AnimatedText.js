@@ -1,19 +1,38 @@
 import React, { useEffect } from "react";
 
+// Add this CSS globally BEFORE React renders to prevent any content flash
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.innerHTML = `
+    body.hide-content-during-load {
+      overflow: hidden !important;
+      background: #000 !important;
+    }
+    /* Hide all main content */
+    body.hide-content-during-load #root,
+    body.hide-content-during-load .App,
+    body.hide-content-during-load main {
+      background: #000 !important;
+    }
+    body.hide-content-during-load #root > div:not([id="loader-root"]),
+    body.hide-content-during-load .App > div:not([id="loader-root"]) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+  `;
+  document.head.appendChild(style);
+  document.body.classList.add('hide-content-during-load');
+}
+
 const AnimatedText = ({ onAnimationComplete }) => {
   useEffect(() => {
-    // Hide navbar and footer during animation
-    const navbar = document.querySelector('nav, header, .navbar, .header');
-    const footer = document.querySelector('footer, .footer');
-    
-    if (navbar) navbar.style.display = 'none';
-    if (footer) footer.style.display = 'none';
-
     const textElement = document.getElementById("animatedText");
     
     // Safety check - ensure element exists
     if (!textElement) {
       console.error("AnimatedText element not found");
+      document.body.classList.remove('hide-content-during-load');
       if (onAnimationComplete) onAnimationComplete();
       return;
     }
@@ -29,9 +48,8 @@ const AnimatedText = ({ onAnimationComplete }) => {
         textElement.style.strokeDashoffset = "0";
 
         setTimeout(() => {
-          // Show navbar and footer again after animation
-          if (navbar) navbar.style.display = '';
-          if (footer) footer.style.display = '';
+          // Show all page content again after animation
+          document.body.classList.remove('hide-content-during-load');
           
           if (onAnimationComplete) onAnimationComplete();
         }, 3500);
@@ -40,23 +58,25 @@ const AnimatedText = ({ onAnimationComplete }) => {
 
     startAnimation();
 
-    // Cleanup function to ensure navbar/footer are shown if component unmounts
+    // Cleanup function to ensure content is shown if component unmounts
     return () => {
-      if (navbar) navbar.style.display = '';
-      if (footer) footer.style.display = '';
+      document.body.classList.remove('hide-content-during-load');
     };
   }, [onAnimationComplete]);
 
   return (
-    <div style={{ 
-      position: "fixed", 
-      top: 0,
-      left: 0,
-      width: "100%", 
-      height: "100vh", 
-      backgroundColor: "#000",
-      zIndex: 9999 // Ensure it's above everything
-    }}>
+    <div 
+      id="loader-root"
+      style={{ 
+        position: "fixed", 
+        top: 0,
+        left: 0,
+        width: "100%", 
+        height: "100vh", 
+        backgroundColor: "#000",
+        zIndex: 9999 // Ensure it's above everything
+      }}
+    >
       <style>{`
         .animated-text-svg {
           position: absolute;
