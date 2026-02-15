@@ -37,10 +37,10 @@ const Homepage = () => {
 
       {showOtherContent && (
         <div className="md:flex md:flex-col w-full overflow-x-hidden">
-          <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 px-3 sm:px-6 md:px-12 w-full max-w-full box-border">
+          <div className="flex flex-col xl:flex-row items-center space-y-6 xl:space-y-0 xl:space-x-8 px-3 sm:px-6 md:px-12 w-full max-w-full box-border">
             {/* Text Section */}
-            <div className="flex-1 text-center md:text-left w-full max-w-full">
-              <p className="sdv-heading font-calsans leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg break-words">
+            <div className="flex-1 text-center xl:text-left w-full max-w-full">
+              <p className="sdv-heading font-calsans leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#C10000] to-[#C10000] drop-shadow-lg break-words font-extrabold">
                 Self Driving Vehicle Workshop 7.0
               </p>
               {/*<div className="text-2xl font-calsans flex flex-col md:flex-row text-white justify-center items-center mt-4">
@@ -54,13 +54,13 @@ const Homepage = () => {
               </p>
 
               <div className="mt-6 w-full">
-                <p className="flex items-center justify-center md:justify-start gap-2 lg:gap-3 flex-wrap">
+                <p className="flex items-center justify-center xl:justify-start gap-2 lg:gap-3 flex-wrap">
                   <MapPin className="text-[#C10000] w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0" />
                   <span className="font-Manrope text-white text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl tracking-wider break-words">
                     SAC Auditorium, NIT Durgapur
                   </span>
                 </p>
-                <p className="flex items-center justify-center md:justify-start gap-2 mt-3 sm:mt-4 lg:gap-3 flex-wrap">
+                <p className="flex items-center justify-center xl:justify-start gap-2 mt-3 sm:mt-4 lg:gap-3 flex-wrap">
                   <CalendarDays className="text-[#C10000] w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex-shrink-0" />
                   <span className="font-Manrope text-white text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl tracking-wider break-words">
                     6th - 8th March, 2026
@@ -69,7 +69,7 @@ const Homepage = () => {
               </div>
             </div>
 
-            <div className="flex-1 w-full md:w-auto flex justify-center mt-4 md:mt-0">
+            <div className="flex-1 w-full xl:w-auto flex justify-center mt-4 xl:mt-0">
               <img
                 src="https://i.ibb.co/r0bz453/1-removebg.png"
                 alt="SDV Workshop"

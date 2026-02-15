@@ -103,6 +103,7 @@
 .card .info h1 {
   text-align: left;
   font: 400 4em/1 'Manrope', sans-serif;
+  font-weight: 900;
   font-size: 1.7em;
   margin: 0;
 }
@@ -139,10 +140,18 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  font-weight: bold;
-  z-index: 1;
+  font-weight: 900;
+  z-index: 3;
   font-size: 1.2em;
   color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.card:hover .card-heading {
+  opacity: 0;
 }
 
 @media (max-width: 1024px) {
@@ -191,4 +200,3 @@
     margin: 15px 0;
   }
 }
-
