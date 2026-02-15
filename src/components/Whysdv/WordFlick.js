@@ -48,7 +48,39 @@ const WordFlick = () => {
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <div style={{ color: "white", fontSize: "2.4rem" }}>{part}</div>
+      <style>{`
+        .word-flick-text {
+          color: white;
+          font-size: 2.4rem;
+          text-align: center;
+          padding: 0 1rem;
+        }
+        
+        @media (max-width: 1024px) {
+          .word-flick-text {
+            font-size: 1.8rem;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .word-flick-text {
+            font-size: 1.5rem;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .word-flick-text {
+            font-size: 1.2rem;
+          }
+        }
+        
+        @media (max-width: 360px) {
+          .word-flick-text {
+            font-size: 1rem;
+          }
+        }
+      `}</style>
+      <div className="word-flick-text">{part}</div>
     </div>
   );
 };

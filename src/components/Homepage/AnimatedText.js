@@ -10,14 +10,23 @@ const AnimatedText = ({ onAnimationComplete }) => {
     if (footer) footer.style.display = 'none';
 
     const textElement = document.getElementById("animatedText");
+    
+    // Safety check - ensure element exists
+    if (!textElement) {
+      console.error("AnimatedText element not found");
+      if (onAnimationComplete) onAnimationComplete();
+      return;
+    }
 
-    const restartAnimation = () => {
+    const startAnimation = () => {
+      // Start with text hidden (high offset)
       textElement.style.transition = "none";
-      textElement.style.strokeDashoffset = "0";
+      textElement.style.strokeDashoffset = "1000";
 
       setTimeout(() => {
+        // Animate to visible (0 offset)
         textElement.style.transition = "stroke-dashoffset 3s ease";
-        textElement.style.strokeDashoffset = "1000";
+        textElement.style.strokeDashoffset = "0";
 
         setTimeout(() => {
           // Show navbar and footer again after animation
@@ -29,7 +38,7 @@ const AnimatedText = ({ onAnimationComplete }) => {
       }, 50);
     };
 
-    restartAnimation();
+    startAnimation();
 
     // Cleanup function to ensure navbar/footer are shown if component unmounts
     return () => {
@@ -81,16 +90,6 @@ const AnimatedText = ({ onAnimationComplete }) => {
         className="animated-text-svg"
       >
         <defs>
-          <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="400" height="400">
-            <image
-              href="https://iili.io/20FHSCN.png"
-              x="0"
-              y="0"
-              width="400"
-              height="400"
-            />
-          </pattern>
-
           <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blurred" />
             <feOffset in="blurred" dx="0" dy="0" result="offsetBlurred" />
@@ -107,15 +106,15 @@ const AnimatedText = ({ onAnimationComplete }) => {
           id="animatedText"
           x="50%"
           y="150"
+          fill="none"
           style={{
-            fill: "url(#imagePattern)",
             fontFamily: '"Protest Guerrilla", sans-serif',
             fontSize: "150px",
             letterSpacing: "5px",
             stroke: "#CA3435",
-            strokeWidth: "1px",
-            strokeDasharray: "500",
-            strokeDashoffset: "500",
+            strokeWidth: "2px",
+            strokeDasharray: "1000",
+            strokeDashoffset: "1000",
             filter: "url(#glowFilter)",
             textAnchor: "middle",
           }}

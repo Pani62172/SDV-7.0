@@ -40,6 +40,10 @@ export const Navbar = () => {
   return (
     <div className="nav-container">
       <style>{`
+        .register-btn-wrapper {
+          margin-right: 1rem;
+        }
+        
         .register-btn-wrapper button {
           font-size: 1rem;
           padding: 0.5em 1.6em;
@@ -65,8 +69,17 @@ export const Navbar = () => {
           <a href="/">
             <img
               src="https://i.ibb.co/fvZpdy8/SAE-Logo-White-3x.png"
-              alt="Logo"
+              alt="SAE Logo"
               className="logo transformed-logo"
+            />
+          </a>
+        </div>
+        <div className="sdv-logo-container">
+          <a href="/">
+            <img
+              src="/SDV-logo.jpeg"
+              alt="SDV Logo"
+              className="logo sdv-logo"
             />
           </a>
         </div>
