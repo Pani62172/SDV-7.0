@@ -177,7 +177,7 @@ html, body {
 @media (max-width: 768px) {
   .sdv-heading{
     font-size: 72px;
-    padding: 0 1rem;
+    padding: 3rem 1rem;
     letter-spacing: 2px;
     font-weight: 900;
    }
