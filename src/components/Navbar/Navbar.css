@@ -232,7 +232,7 @@
     background: rgba(0, 0, 0, 0.95);
     padding: 3rem 1.5rem 1.5rem 1.5rem;
     text-transform: uppercase;
-    gap: 1.5rem;
+    gap: 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
@@ -259,7 +259,7 @@
   }
 
   .nav-item {
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: center;
     font-family: 'Manrope', sans-serif;
     color: white;
@@ -267,6 +267,14 @@
     text-transform: uppercase;
     width: auto;
     margin-bottom: 0.5rem;
+  }
+  
+  /* Center the register button */
+  .nav-items .register-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
   }
   
   @keyframes slideInFromRight {
@@ -359,14 +367,16 @@
 
 @media (max-width: 720px) {
   .nav-container {
-    height: auto;
-    flex-direction: column;
+    height: 4.25rem;
+    flex-direction: row;
     padding-bottom: 0;
     background-color: black;
     overflow: visible;
     position: sticky;
     top: 0;
     z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
   }
   
   /* Backdrop overlay when menu is open - fully black, covers everything */
@@ -396,22 +406,23 @@
     align-items: center;
     gap: 0.8rem;
     padding-left: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
     max-width: 100%;
-    width: 100%;
+    width: auto;
     position: relative;
     z-index: 1001;
   }
   
   /* Close/Hamburger icon - top right */
   .right-section {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    position: relative;
+    top: 0;
+    right: 0;
     width: auto;
     z-index: 1003;
+    padding-right: 1rem;
   }
   
   .toggle-icon {
@@ -421,7 +432,7 @@
     right: 0;
     margin: 0;
     z-index: 1003;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   /* Menu slides in from right side - full width, above backdrop */
@@ -509,12 +520,15 @@
     width: auto;
     text-align: center;
     margin-bottom: 0;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     padding: 0.4rem 1rem;
   }
   
-  /* Add space below register button in mobile menu */
+  /* Center the register button in mobile menu */
   .nav-items .register-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -522,7 +536,7 @@
 
 @media (max-width: 540px) {
   .nav-item {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
   
   .nav-items {
@@ -535,7 +549,7 @@
     font-weight: bold;
     font-family: 'Manrope', sans-serif;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     margin-bottom: 0;
     padding: 0.5rem 1rem;
   }
@@ -558,8 +572,8 @@
   .left-section {
     gap: 0.7rem;
     padding-left: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   
   .transformed-logo {
@@ -575,7 +589,7 @@
   .nav-item {
     margin-bottom: 0;
     padding: 0.4rem 1rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   
   .nav-items {
@@ -611,7 +625,7 @@
   .nav-item {
     margin-bottom: 0;
     padding: 0.4rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   
   .nav-items {
@@ -631,7 +645,7 @@
   /* Make register button smaller */
   .nav-items .register-btn-wrapper button {
     font-size: 0.8rem !important;
-    padding: 0.35em 1.2em !important;
+    padding: 0.35em 1.1em !important;
   }
 }
 
