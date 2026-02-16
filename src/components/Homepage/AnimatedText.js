@@ -150,19 +150,19 @@ const AnimatedText = ({ onAnimationComplete }) => {
         /* FIXED: Make text bigger on small screens */
         @media (max-width: 767px) {
           #animatedText {
-            font-size: 220px !important;
+            font-size: 190px !important;
           }
         }
         
         @media (max-width: 480px) {
           #animatedText {
-            font-size: 210px !important;
+            font-size: 180px !important;
           }
         }
         
         @media (max-width: 360px) {
           #animatedText {
-            font-size: 200px !important;
+            font-size: 180px !important;
           }
         }
       `}</style>
