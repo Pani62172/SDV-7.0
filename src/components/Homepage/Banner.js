@@ -1,61 +1,32 @@
 import React, { useRef, useLayoutEffect, useState } from "react";
 import {
   motion,
-  useScroll,
-  useSpring,
   useMotionValue,
-  useVelocity,
   useAnimationFrame
 } from "framer-motion";
 
 const Banner = () => {
-  // Motion values
   const x = useMotionValue(0);
 
-  // Scroll tracking
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 120,
-    stiffness: 900,
-    mass: 0.2
-  });
-
-  // Measure text width once
   const textRef = useRef(null);
   const [textWidth, setTextWidth] = useState(0);
 
   useLayoutEffect(() => {
     if (textRef.current) {
-      setTextWidth(textRef.current.offsetWidth);
+      const width = textRef.current.offsetWidth;
+      setTextWidth(width);
+      x.set(-width);
     }
   }, []);
-
-  // Movement config
-  const baseVelocity = 100; // px/sec
-  const direction = useMotionValue(1); // 1 = right→left, -1 = left→right
+  const baseVelocity = -80;
 
   useAnimationFrame((_, delta) => {
     if (delta > 100 || textWidth === 0) return;
+    let nextX = x.get() + baseVelocity * (delta / 1000);
 
-    const v = smoothVelocity.get();
-
-    // Decide target direction from scroll
-    let targetDir = direction.get();
-    if (v < -30) targetDir = 1;
-    else if (v > 30) targetDir = -1;
-
-    // Smooth direction interpolation
-    const currentDir = direction.get();
-    direction.set(currentDir + (targetDir - currentDir) * 0.08);
-
-    // Move
-    let nextX =
-      x.get() + direction.get() * baseVelocity * (delta / 1000);
-
-    // Seamless wrap
-    if (nextX <= -textWidth) nextX += textWidth;
-    if (nextX >= 0) nextX -= textWidth;
+    if (nextX >= 0) {
+      nextX -= textWidth;
+    }
 
     x.set(nextX);
   });
@@ -69,7 +40,7 @@ const Banner = () => {
         className="flex whitespace-nowrap will-change-transform"
         style={{ x }}
       >
-        {[...Array(6)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <span
             key={i}
             ref={i === 0 ? textRef : null}

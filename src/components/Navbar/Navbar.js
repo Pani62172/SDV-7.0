@@ -12,20 +12,76 @@ export const Navbar = () => {
       setShowRegisterButton(true);
     }, 1000);
 
-    // Cleanup the timer to avoid memory leaks
-    return () => clearTimeout(timer);
+    // Cleanup function
+    return () => {
+      clearTimeout(timer);
+      // Ensure scroll is re-enabled when component unmounts
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
   }, []);
 
+  useEffect(() => {
+    // Ensure scroll is properly set based on menu state
+    if (isMenuOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      }
+    }
+  }, [isMenuOpen]);
+
   const closeMenu = () => {
+    const navContainer = document.querySelector(".nav-container");
+    navContainer.classList.remove("menu-open");
+    
+    // Get the scroll position and restore it
+    const scrollY = document.body.style.top;
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+    
+    // Restore scroll position
+    if (scrollY) {
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+    
     setIsMenuOpen(false);
   };
 
   const handleWheelClick = () => {
     const navItems = document.querySelector(".nav-items");
+    const navContainer = document.querySelector(".nav-container");
 
     if (isMenuOpen) {
       navItems.classList.remove("open");
       navItems.classList.add("close");
+      navContainer.classList.remove("menu-open");
+      
+      // Re-enable scrolling
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.documentElement.style.overflow = "";
+      
       setTimeout(() => {
         navItems.classList.remove("visible");
         setIsMenuOpen(false);
@@ -33,6 +89,16 @@ export const Navbar = () => {
     } else {
       navItems.classList.add("visible", "open");
       navItems.classList.remove("close");
+      navContainer.classList.add("menu-open");
+      
+      // Disable scrolling aggressively
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+      
       setIsMenuOpen(true);
     }
   };
@@ -77,7 +143,7 @@ export const Navbar = () => {
         <div className="sdv-logo-container">
           <a href="/">
             <img
-              src="/SDV-logo.jpeg"
+              src="/SDV-logo.png"
               alt="SDV Logo"
               className="logo sdv-logo"
             />
