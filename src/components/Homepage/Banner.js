@@ -24,7 +24,7 @@ const Banner = () => {
   }, []);
 
   // Movement config - left to right infinite scroll
-  const baseVelocity = 80; // positive = left to right (px/sec) - smooth speed
+  const baseVelocity = -80; // positive = left to right (px/sec) - smooth speed
 
   useAnimationFrame((_, delta) => {
     if (delta > 100 || textWidth === 0) return;
