@@ -17,6 +17,7 @@
     font-size: 1.6rem;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
   }
 
   .upcoming-details {
@@ -127,7 +128,7 @@
       margin-left: 0;
       margin-right: 0;
       font-size: 1.2rem;
-      text-align: left;
+      text-align: center;
     }
     
     .media-right h3 {
@@ -198,7 +199,7 @@
       font-size: 1rem;
       margin-left: 5px;
       margin-right: 5px;
-      text-align: left;
+      text-align: center;
     }
     
     .media-right h3 {
@@ -214,18 +215,18 @@
   @media  (min-width: 820px) and  (max-width: 920px){
     .media-right {
         flex: 1 1;
-        text-align: left;
+        text-align: center;
         margin: 10px;
       }
       
     .media-right h3 {
-      text-align: left;
+      text-align: center;
       padding-left: 30px;
       padding-right: 30px;
     }
       
     .media-right p {
-      text-align: left;
+      text-align: center;
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -250,13 +251,13 @@
   @media (width: 540px){
     
     .media-right h3 {
-      text-align: left;
+      text-align: center;
       padding-left: 25px;
       padding-right: 25px;
     }
     
     .media-right p {
-      text-align: left;
+      text-align: center;
       padding-left: 25px;
       padding-right: 25px;
     }
@@ -322,7 +323,7 @@
     .media-right {
       flex: 1 1 auto;
       margin: 20px;
-      text-align: left;
+      text-align: center;
     }
   
     .media-right h3 {
@@ -330,7 +331,7 @@
       margin-bottom: 15px; /* Adjust spacing */
       margin-left: 5px; /* Reduce left margin */
       margin-right: 5px; /* Reduce right margin */
-      text-align: left;
+      text-align: center;
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -339,7 +340,7 @@
       font-size: 1.2rem; /* Adjust font size */
       margin: 0 10px; /* Adjust horizontal margins */
       line-height: 1.5; /* Tweak line height for readability */
-      text-align: left;
+      text-align: center;
       padding-left: 30px;
       padding-right: 30px;
     }
