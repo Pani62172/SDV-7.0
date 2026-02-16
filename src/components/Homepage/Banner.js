@@ -6,8 +6,10 @@ import {
 } from "framer-motion";
 
 const Banner = () => {
+  // Motion value for horizontal position - start off-screen left
   const x = useMotionValue(0);
 
+  // Measure text width once
   const textRef = useRef(null);
   const [textWidth, setTextWidth] = useState(0);
 
@@ -15,15 +17,22 @@ const Banner = () => {
     if (textRef.current) {
       const width = textRef.current.offsetWidth;
       setTextWidth(width);
+      // Start with text off-screen to the left
       x.set(-width);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const baseVelocity = -80;
+
+  // Movement config - left to right infinite scroll
+  const baseVelocity = 80; // positive = left to right (px/sec) - smooth speed
 
   useAnimationFrame((_, delta) => {
     if (delta > 100 || textWidth === 0) return;
+
+    // Move continuously from left to right
     let nextX = x.get() + baseVelocity * (delta / 1000);
 
+    // Seamless wrap - when text scrolls fully right, reset to left
     if (nextX >= 0) {
       nextX -= textWidth;
     }
